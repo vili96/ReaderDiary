@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="bg_img.jpg"
+             Title="Add new book"
+             x:Class="ReadersDiary.Views.AddPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry x:Name="bookTitle" Placeholder="Enter book title..." HorizontalOptions="FillAndExpand"></Entry>
+            <Entry x:Name="bookAuthor" Placeholder="Enter book author..." HorizontalOptions="FillAndExpand"></Entry>
+            <Picker x:Name="genre" Title="Select Genre..." HorizontalOptions="FillAndExpand" SelectedIndex="0">
+                <Picker.Items>
+                    <x:String>Horror</x:String>
+                    <x:String>Novel</x:String>
+                    <x:String>Fantasy</x:String>
+                    <x:String>Sci-Fi</x:String>
+                    <x:String>Crime</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--<Button x:Name="uploadImage" Text="Upload image" Clicked="UploadImage_Clicked"></Button>-->
+            <Image x:Name ="imagePreview" Source="default_cover.png" Aspect="AspectFit" Margin="0,25,0,25" HeightRequest="320"></Image>
+            <Button x:Name="saveBook" Text="Save" Clicked="SaveBook_Clicked" VerticalOptions="EndAndExpand"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
