@@ -19,7 +19,7 @@
             </Picker>
             <!--<Button x:Name="uploadImage" Text="Upload image" Clicked="UploadImage_Clicked"></Button>-->
             <Image x:Name ="imagePreview" Source="default_cover.png" Aspect="AspectFit" Margin="0,25,0,25" HeightRequest="320"></Image>
-            <Button x:Name="saveBook" Text="Save" Clicked="SaveBook_Clicked" VerticalOptions="EndAndExpand"></Button>
+            <Button x:Name="saveBook" Text="Save" BackgroundColor="Black" TextColor="White" Clicked="SaveBook_Clicked" VerticalOptions="EndAndExpand"></Button>
 
         </StackLayout>
     </ContentPage.Content>

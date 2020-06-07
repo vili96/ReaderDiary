@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="bg_img.jpg"
+             Title="Book Details"
+             x:Class="ReadersDiary.Views.DetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name ="imagePreview" Source="default_cover.png" Aspect="AspectFit" Margin="0,25,0,25" HeightRequest="320"></Image>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <StackLayout Margin="5,0,0,0" Padding="10">
+                    <Label Text="Title" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Author" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="Genre" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <BoxView  
+                VerticalOptions="Fill"
+                HorizontalOptions="Center"
+                WidthRequest="2"
+                Color="Black"/>
+                <StackLayout Padding="10">
+                    <Label x:Name="bookTitle" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                    <Label x:Name="bookAuthor" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                    <Label x:Name="genre" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <Button x:Name="backBtn" BackgroundColor="Black" TextColor="White" Text="Go Back" Clicked="Back_Clicked" VerticalOptions="EndAndExpand"></Button>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -45,5 +45,19 @@ namespace ReadersDiary.Services
         {
             return MyData.books.IndexOf(book);
         }
+
+        static public ObservableCollection<Book> GetAllBooksByGenre(string genre)
+        {
+            ObservableCollection<Book> filteredBooks = new ObservableCollection<Book>();
+
+            foreach (var item in MyData.books)
+            {
+                if (item.Genre == genre)
+                {
+                    filteredBooks.Add(item);
+                }
+            }
+            return filteredBooks;
+        }
     }
 }

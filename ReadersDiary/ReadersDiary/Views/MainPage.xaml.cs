@@ -54,5 +54,22 @@ namespace ReadersDiary
             var item = (Book)itemsender?.CommandParameter;
             Navigation.PushAsync(new AddPage(item));
         }
+
+        private void CollectionViewBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var itemsender = (CollectionView)sender;
+            var item = (Book)itemsender?.SelectedItem;
+            if (item != null)
+            {
+                Navigation.PushAsync(new DetailsPage(item));
+
+            }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            collectionViewBooks.SelectedItem = null;
+        }
     }
 }

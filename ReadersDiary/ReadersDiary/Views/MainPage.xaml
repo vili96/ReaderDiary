@@ -31,7 +31,7 @@
 
     </ContentPage.ToolbarItems>
 
-    <CollectionView x:Name="collectionViewBooks">
+    <CollectionView x:Name="collectionViewBooks" SelectionMode="Single" SelectionChanged="CollectionViewBooks_SelectionChanged">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
         </CollectionView.ItemsLayout>
